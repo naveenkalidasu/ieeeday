@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE Day 2025 — Events</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body class="events-page">
+  <header>
+    <h1>IEEE Day 2025 — Technical Events</h1>
+    <p>Showcasing innovation and creativity through coding and design challenges!</p>
+  </header>
+
+  <section class="event-section">
+    <!-- Event 1 -->
+    <div class="event">
+      <img src="/images/codesprint.jpg" alt="CodeSprint Event" class="event-img" />
+      <h3>1. CodeSprint – Coding Challenge</h3>
+      <div class="event-buttons">
+        <button class="details-btn" onclick="toggleDetails('details1')">Details</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuBiR-2jT-lCuMvuyy1Ca_b4sQobNL2-_ew_4XP22LEyG-MQ/viewform?usp=header" target="_blank" class="register-now">Register Now</a>
+      </div>
+      <ul id="details1" class="event-details">
+        <li>Individual or teams (max 2).</li>
+        <li>Languages: C, C++, Java, Python.</li>
+        <li>Internet allowed only for documentation.</li>
+        <li>Original code only; plagiarism disqualified.</li>
+        <li>Judged on efficiency and execution time.</li>
+      </ul>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event">
+      <img src="/images/webcraft.jpg" alt="WebCraft Event" class="event-img" />
+      <h3>2. WebCraft – Web Design Challenge</h3>
+      <div class="event-buttons">
+        <button class="details-btn" onclick="toggleDetails('details2')">Details</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuBiR-2jT-lCuMvuyy1Ca_b4sQobNL2-_ew_4XP22LEyG-MQ/viewform?usp=header" target="_blank" class="register-now">Register Now</a>
+      </div>
+      <ul id="details2" class="event-details">
+        <li>Teams of 1–2 participants.</li>
+        <li>Only HTML, CSS, JS allowed.</li>
+        <li>Design must follow the given theme.</li>
+        <li>Judged on creativity and responsiveness.</li>
+      </ul>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event">
+      <img src="/images/aiarena.jpg" alt="AI Arena Event" class="event-img" />
+      <h3>3. AI Arena – ML/AI Mini Challenge</h3>
+      <div class="event-buttons">
+        <button class="details-btn" onclick="toggleDetails('details3')">Details</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuBiR-2jT-lCuMvuyy1Ca_b4sQobNL2-_ew_4XP22LEyG-MQ/viewform?usp=header" target="_blank" class="register-now">Register Now</a>
+      </div>
+      <ul id="details3" class="event-details">
+        <li>Teams of 2–3 participants.</li>
+        <li>Given dataset/task must be used.</li>
+        <li>Accuracy and clarity of explanation judged.</li>
+        <li>Environment preinstalled for coding.</li>
+      </ul>
+    </div>
+
+    <!-- Event 4 -->
+    <div class="event">
+      <img src="/images/ideathon.jpg" alt="Ideathon Event" class="event-img" />
+      <h3>4. Ideathon – Innovate to Impact</h3>
+      <div class="event-buttons">
+        <button class="details-btn" onclick="toggleDetails('details4')">Details</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuBiR-2jT-lCuMvuyy1Ca_b4sQobNL2-_ew_4XP22LEyG-MQ/viewform?usp=header" target="_blank" class="register-now">Register Now</a>
+      </div>
+      <ul id="details4" class="event-details">
+        <li>Teams of 2–4 participants.</li>
+        <li>One original idea submission per team.</li>
+        <li>5-minute presentation limit.</li>
+        <li>Judged on innovation, feasibility, clarity.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div style="text-align: center; margin-bottom: 30px;">
+    <a href="/" class="register-btn">⬅ Back to Home</a>
+  </div>
+
+  <footer>© 2025 IEEE Student Branch — All Rights Reserved.</footer>
+
+  <script>
+    function toggleDetails(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

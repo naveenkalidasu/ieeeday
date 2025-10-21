@@ -1,0 +1,314 @@
+/* ======================================
+   GLOBAL RESET & THEME COLORS
+====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --ieee-blue: #0072ff;
+  --ieee-pink: #ff008c;
+  --light-bg: #f9f9fb;
+  --dark-overlay: rgba(0, 0, 0, 0.65);
+  --radius: 18px;
+}
+
+/* ======================================
+   HOME PAGE STYLING
+====================================== */
+body {
+  min-height: 100vh;
+  background: url('/images/background.png') center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-overlay);
+  z-index: 0;
+}
+
+/* Container */
+.container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Glass Card */
+.content-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 40px 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease;
+}
+
+.content-box h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--ieee-blue);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.content-box h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f8f8f8;
+  margin-bottom: 20px;
+}
+
+.content-box p {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+/* CTA Button */
+.register-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, var(--ieee-blue), var(--ieee-pink));
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 114, 255, 0.4);
+}
+
+.register-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 0, 140, 0.5);
+}
+
+/* Logos */
+.logos {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.logos img {
+  width: 180px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.logos img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px var(--ieee-blue));
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 0.9rem;
+  color: #ccc;
+  z-index: 2;
+}
+
+/* ======================================
+   EVENTS PAGE STYLING
+====================================== */
+body.events-page {
+  background: var(--light-bg);
+  color: #222;
+  display: block;
+}
+
+body.events-page header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+body.events-page header h1 {
+  color: var(--ieee-blue);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+body.events-page header p {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Event Grid */
+.event-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 35px;
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Event Card */
+.event {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.event:hover {
+  transform: translateY(-6px);
+  border-color: var(--ieee-blue);
+  box-shadow: 0 8px 25px rgba(0, 114, 255, 0.15);
+}
+
+/* Event Image */
+.event-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Event Title */
+.event h3 {
+  margin: 15px 0 10px;
+  font-size: 1.4rem;
+  color: #111;
+  font-weight: 600;
+}
+
+/* Buttons */
+.event-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.details-btn,
+.register-now {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.details-btn {
+  background: var(--ieee-blue);
+  color: #fff;
+}
+
+.details-btn:hover {
+  background: #005bcc;
+}
+
+.register-now {
+  background: var(--ieee-pink);
+  color: #fff;
+  text-decoration: none;
+}
+
+.register-now:hover {
+  background: #ff33aa;
+}
+
+/* Event Details */
+.event-details {
+  display: none;
+  text-align: left;
+  margin: 15px 25px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.event-details li {
+  margin-bottom: 6px;
+}
+
+/* Animation for toggle */
+.event-details.show {
+  display: block;
+  animation: fadeSlide 0.4s ease;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer (Events Page) */
+body.events-page footer {
+  background: #f1f1f1;
+  color: #666;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+/* ======================================
+   ANIMATIONS
+====================================== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================================
+   RESPONSIVE DESIGN
+====================================== */
+@media (max-width: 768px) {
+  .content-box {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .content-box h1 { font-size: 2.2rem; }
+  .content-box h2 { font-size: 1.2rem; }
+
+  .logos {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .event-section {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .event h3 { font-size: 1.2rem; }
+  .event-img { height: 180px; }
+}
